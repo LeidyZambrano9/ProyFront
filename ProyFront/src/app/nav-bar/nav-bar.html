@@ -1,1 +1,32 @@
-<p>nav-bar works!</p>
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container navbar-container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/LogoSinF.png" alt="Logo Tu Moto Ideal" class="logo-img me-3">
+      <h1 class="brand-title mb-0">TU MOTO IDEAL</h1>
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav menu">
+        <li class="nav-item"><a class="nav-link" routerLink="/inicio">INICIO</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/categorias">CATEGORÍAS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">COMPARADOR</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">AYUDA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

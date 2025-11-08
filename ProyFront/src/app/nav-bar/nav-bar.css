@@ -1,13 +1,23 @@
 /* === BASE GENERAL === */
 .custom-navbar {
-  background-color: #111 !important;
+  background: linear-gradient(135deg, #111 0%, #222 100%) !important;
   border-top: 3px solid #910002 !important;
   border-bottom: 3px solid #910002 !important;
-  padding: 10px 20px !important;
+  padding: 8px 20px !important;
   font-family: 'Oswald', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
-
+.custom-navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #910002, transparent);
+}
 
 /* Contenedor del navbar */
 .navbar-container {
@@ -20,35 +30,139 @@
 
 /* === LOGO === */
 .logo-img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 .brand-title {
   font-family: 'Kelly Slab', sans-serif;
-  font-size: 25px;
-  letter-spacing: 1px;
+  font-size: 24px;
+  letter-spacing: 1.5px;
   color: #fff;
-}
-
-/* === ENLACES DEL MENÚ === */
-.nav-link {
-  color: #fff !important;
-  font-weight: bold;
-  margin-left: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #910002 !important;
-  transform: scale(1.1);
+.brand-title:hover {
+  text-shadow: 0 2px 8px rgba(145, 0, 2, 0.3);
 }
 
-/* Ajuste del icono hamburguesa */
-.navbar-toggler {
-  border-color: #910002;
+/* === MENÚ NAVEGACIÓN === */
+.menu-nav {
+  gap: 10px;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding: 12px 20px !important;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #910002;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background: rgba(145, 0, 2, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+  width: 80%;
+}
+
+.nav-link.active {
+  color: #fff !important;
+  background: rgba(145, 0, 2, 0.2);
+}
+
+.nav-link.active::before {
+  width: 100%;
+  background: #fff;
+}
+
+/* === BOTÓN HAMBURGUESA MEJORADO === */
+.custom-toggler {
+  border: 2px solid #910002;
+  border-radius: 4px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+}
+
+.custom-toggler:hover {
+  background: rgba(145, 0, 2, 0.1);
+  border-color: #fff;
+}
+
+.custom-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(145, 0, 2, 0.25);
+  outline: none;
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(145,0,2)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  transition: transform 0.3s ease;
+}
+
+.custom-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 991px) {
+  .navbar-container {
+    flex-wrap: nowrap;
+  }
+  
+  .menu-nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #910002;
+  }
+  
+  .nav-link {
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .brand-title {
+    font-size: 20px;
+  }
+}
+
+/* Animación suave para el collapse */
+.collapsing {
+  transition: height 0.3s ease;
 }

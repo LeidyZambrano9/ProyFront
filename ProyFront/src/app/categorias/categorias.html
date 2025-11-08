@@ -1,0 +1,31 @@
+<section class="categories-section">
+  <div class="container">
+    <!-- Encabezado -->
+    <div class="categories-header text-center mb-5">
+      <h1 class="section-title">CATEGORÍAS</h1>
+      <p class="section-description">
+        EN ESTA SECCIÓN ENCONTRARÁS LOS DIFERENTES TIPOS DE MOTOS DISPONIBLES EN COLOMBIA. 
+        EXPLORA CADA CATEGORÍA Y DESCUBRE CUAL SE ADAPTA MEJOR A TU ESTILO DE VIDA Y SERÁ 
+        TU COMPAÑERA EN LA PRÓXIMA AVENTURA.
+      </p>
+    </div>
+
+    <!-- Grid de Categorías -->
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let category of categories">
+        <div class="category-card" (click)="selectCategory(category)">
+          <div class="card-image">
+            <img [src]="category.image" [alt]="category.name" class="img-fluid">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="category-name">{{ category.name }}</h3>
+            <div class="arrow-icon">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

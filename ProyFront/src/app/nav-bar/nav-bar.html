@@ -8,7 +8,7 @@
 
     <!-- Botón hamburguesa -->
     <button
-      class="navbar-toggler"
+      class="navbar-toggler custom-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
@@ -21,11 +21,16 @@
 
     <!-- Menú -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav menu">
-        <li class="nav-item"><a class="nav-link" routerLink="/inicio">INICIO</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/categorias">CATEGORÍAS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">COMPARADOR</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">AYUDA</a></li>
+      <ul class="navbar-nav menu-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/categorias" routerLinkActive="active">CATEGORÍAS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/comparador" routerLinkActive="active">COMPARADOR</a>
+        </li>
       </ul>
     </div>
   </div>

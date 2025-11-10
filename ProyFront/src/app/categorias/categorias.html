@@ -14,16 +14,16 @@
     <div class="row g-4">
       <div class="col-12 col-sm-6 col-lg-4" *ngFor="let category of categories">
         <div class="category-card" (click)="selectCategory(category)">
+          <!-- Título arriba y centrado -->
+          <h3 class="category-name">{{ category.name }}</h3>
+
+          <!-- Imagen -->
           <div class="card-image">
             <img [src]="category.image" [alt]="category.name" class="img-fluid">
-            <div class="card-overlay"></div>
           </div>
-          <div class="card-content">
-            <h3 class="category-name">{{ category.name }}</h3>
-            <div class="arrow-icon">
-              <i class="fas fa-chevron-right"></i>
-            </div>
-          </div>
+
+          <!-- (Opcional) contenido extra debajo si lo necesitas -->
+          <!-- <div class="card-footer">Descripción o botón</div> -->
         </div>
       </div>
     </div>

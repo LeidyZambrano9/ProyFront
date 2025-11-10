@@ -20,37 +20,37 @@ export class CategoriasComponent implements OnInit {
     {
       id: 1,
       name: 'NAKED',
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: 'assets/Naked.png',
       description: 'Motos versátiles con estilo urbano y deportivo'
     },
     {
       id: 2,
       name: 'DEPORTIVAS',
-      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: 'assets/Deportivas.png',
       description: 'Alto rendimiento y diseño aerodinámico'
     },
     {
       id: 3,
       name: 'AUTOMATICAS',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: 'assets/Automaticas.png',
       description: 'Facilidad de manejo y comodidad'
     },
     {
       id: 4,
       name: 'ENDURO',
-      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: 'assets/Enduro.png',
       description: 'Para aventuras off-road y terrenos difíciles'
     },
     {
       id: 5,
       name: 'TURING',
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: 'assets/Turing.png',
       description: 'Comodidad para largos recorridos y viajes'
     },
     {
       id: 6,
       name: 'ALTO CC',
-      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: 'assets/Alto-cc.png',
       description: 'Gran cilindrada y potencia superior'
     }
   ];

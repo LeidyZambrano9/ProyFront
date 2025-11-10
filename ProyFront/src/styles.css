@@ -5,3 +5,13 @@ body, html {
   overflow-x: hidden;
 }
 
+/* ======== ESTILO GLOBAL ======== */
+body {
+  font-family: 'Oswald', sans-serif; /* Puedes cambiarla por otra, ej: 'Roboto', 'Poppins', etc. */
+  font-size: 18px;                   /* Tamaño base del texto */
+  color: #222;                       /* Color del texto */
+  text-align: center;                /* Centra el texto de toda la página */
+  margin: 0;
+  padding: 0;
+  background-color: #fff;            /* Fondo blanco (opcional) */
+}

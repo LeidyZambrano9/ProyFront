@@ -1,4 +1,7 @@
 <section class="categories-section">
+  <!-- Imagen de fondo fuera del container para mejor control -->
+  <div class="inicio-fondo"></div>
+  
   <div class="container">
     <!-- Encabezado -->
     <div class="categories-header text-center mb-5">
@@ -10,9 +13,9 @@
       </p>
     </div>
 
-    <!-- Grid de Categorías -->
+    <!-- Grid de Categorías - MODIFICADO PARA 2 COLUMNAS -->
     <div class="row g-4">
-      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let category of categories">
+      <div class="col-12 col-md-6" *ngFor="let category of categories">
         <div class="category-card" (click)="selectCategory(category)">
           <!-- Título arriba y centrado -->
           <h3 class="category-name">{{ category.name }}</h3>
@@ -21,9 +24,6 @@
           <div class="card-image">
             <img [src]="category.image" [alt]="category.name" class="img-fluid">
           </div>
-
-          <!-- (Opcional) contenido extra debajo si lo necesitas -->
-          <!-- <div class="card-footer">Descripción o botón</div> -->
         </div>
       </div>
     </div>

@@ -1,0 +1,49 @@
+<section class="cilindrajes-section">
+  <div class="container">
+    <!-- Encabezado con botón de regreso -->
+    <div class="cilindrajes-header text-center mb-5">
+      <button class="btn-back" (click)="goBack()">
+        ← VOLVER A CATEGORÍAS
+      </button>
+      <h1 class="section-title">{{ selectedCategory?.name }}</h1>
+      <p class="section-description">
+        SELECCIONA EL CILINDRAJE QUE SE ADAPTA A TUS NECESIDADES. 
+        CADA OPCIÓN OFRECE UN EQUILIBRIO ÚNICO ENTRE POTENCIA, EFICIENCIA Y EXPERIENCIA DE CONDUCCIÓN.
+      </p>
+    </div>
+
+    <!-- Grid de Cilindrajes -->
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let cilindraje of filteredCilindrajes">
+        <div class="cilindraje-card" (click)="selectCilindraje(cilindraje)">
+          <!-- Título del cilindraje -->
+          <h3 class="cilindraje-cc">{{ cilindraje.cc }}</h3>
+
+          <!-- Imagen -->
+          <div class="card-image">
+            <img [src]="cilindraje.image" [alt]="cilindraje.cc" class="img-fluid"
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk1vdG8gSW1hZ2VuPC90ZXh0Pjwvc3ZnPg=='">
+          </div>
+
+          <!-- Descripción -->
+          <div class="card-content">
+            <p class="cilindraje-description">{{ cilindraje.description }}</p>
+            
+            <!-- Modelos disponibles -->
+            <div class="modelos-list">
+              <h4>Modelos Disponibles:</h4>
+              <ul>
+                <li *ngFor="let modelo of cilindraje.modelos">{{ modelo }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje si no hay cilindrajes -->
+    <div *ngIf="filteredCilindrajes.length === 0" class="no-cilindrajes text-center">
+      <p>No hay cilindrajes disponibles para esta categoría.</p>
+    </div>
+  </div>
+</section>

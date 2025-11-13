@@ -1,0 +1,86 @@
+categorias3.css
+ 
+/* Contenedor principal */
+.container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent; /* quitar fondo gris */
+}
+ 
+/* Fila de tarjetas centrada */
+.row {
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    gap: 1rem; /* espacio entre tarjetas */
+}
+ 
+/* Tarjeta de moto */
+.moto-card {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff; /* tarjeta blanca */
+    display: flex;
+    flex-direction: column;
+    height: 300px; /* altura fija */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra sutil */
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+ 
+/* Ancho de columna reducido: menos ancho */
+.col-6 {
+    max-width: 40%; /* tarjetas más angostas, mantiene 2 columnas */
+}
+ 
+/* Sombra al hover */
+.moto-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+ 
+/* Contenedor de imagen */
+.img-container {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* quitar fondo gris de la imagen */
+    border-bottom: 1px solid #e6e6e6;
+}
+ 
+/* Imagen general de motos */
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+ 
+/* Imagen Apache más grande dentro del contenedor */
+.apache-img {
+    object-fit: cover;
+    transform: scale(1.5);
+}
+ 
+/* Recuadro inferior para el nombre de la moto */
+.card-body {
+    background-color: #e0e0e0;
+    width: 60%;              /* menos ancho */
+    margin: 10px auto;       /* separación superior e inferior */
+    padding: 10px 2px;       /* altura interna */
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;         /* indica que es clickeable */
+    transition: background-color 0.3s, transform 0.2s; /* suaviza cambios */
+}
+ 
+/* Efecto al pasar el mouse */
+.card-body:hover {
+    background-color: #d5d5d5;  /* cambia tono gris */
+    transform: translateY(-3px); /* levanta ligeramente */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra sutil */
+}

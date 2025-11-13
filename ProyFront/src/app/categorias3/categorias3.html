@@ -1,0 +1,43 @@
+<div class="container">
+  <!-- Primera fila -->
+  <div class="row g-3">
+    <div class="col-6" *ngFor="let moto of motos.slice(0,2)">
+      <div class="moto-card">
+        <div class="img-container">
+          <img [src]="moto.img" [alt]="moto.nombre" [class.apache-img]="moto.nombre.includes('Apache')">
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ moto.nombre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Segunda fila -->
+  <div class="row g-3 mt-3">
+    <div class="col-6" *ngFor="let moto of motos.slice(2,4)">
+      <div class="moto-card">
+        <div class="img-container">
+          <img [src]="moto.img" [alt]="moto.nombre" [class.apache-img]="moto.nombre.includes('Apache')">
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ moto.nombre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Tercera fila -->
+  <div class="row g-3 mt-3">
+    <div class="col-6" *ngFor="let moto of motos.slice(4,6)">
+      <div class="moto-card">
+        <div class="img-container">
+          <img [src]="moto.img" [alt]="moto.nombre" [class.apache-img]="moto.nombre.includes('Apache')">
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ moto.nombre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

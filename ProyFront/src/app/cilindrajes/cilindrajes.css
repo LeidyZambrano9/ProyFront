@@ -1,208 +1,83 @@
-/* Sección general de cilindrajes */
-.cilindrajes-section {
-  background-color: #fff;
-  color: #111;
-  padding: 60px 0;
-  min-height: 100vh;
-  font-family: 'Oswald', sans-serif;
+/* Header - Solución simple */
+.inicio-fondo-cilindraje {
+  width: 100%;
+  background-position: center center;   /* La imagen se centra correctamente */
+  background-repeat: no-repeat;         /* Evita que se repita */
+  background-size: cover;               /* La imagen cubre todo el contenedor */
+  height: 50vh;                         /* Ocupa la mitad de la pantalla */
+  width: 100%;                          /* Abarca todo el ancho */
+  margin-bottom: 40px;                  /* Espacio debajo antes del contenido */
 }
 
-/* Botón de regreso */
-.btn-back {
-  background: #910002;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.header-img-cilindraje {
+  width: 100%;
+  height: 250px; /* Altura fija consistente */
+  object-fit: cover;
 }
-
-.btn-back:hover {
-  background: #7a0002;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(145, 0, 2, 0.3);
-}
-
-/* Encabezado */
-.cilindrajes-header {
+/* El resto de tus estilos se mantienen igual */
+.cilindraje-header {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .section-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
+  letter-spacing: 2px;
   color: #910002;
+  margin-bottom: 15px;
   position: relative;
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 80px;
   height: 3px;
   background: #910002;
 }
 
 .section-description {
   font-size: 1rem;
-  line-height: 1.6;
   max-width: 900px;
   margin: 0 auto;
-  color: #000;
+  color: #333;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1.6;
 }
 
-/* Tarjeta de cilindraje */
-.cilindraje-card {
+/* Tarjetas de cilindraje */
+.cuadro-cc-card {
   background: #e6e6e6;
   border-radius: 10px;
-  overflow: hidden;
+  padding: 50px 20px;
+  text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  cursor: pointer;
-  height: 100%;
   border: 2px solid transparent;
-  display: flex;
-  flex-direction: column;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
 }
 
-.cilindraje-card:hover {
+.cuadro-cc-card:hover {
   transform: translateY(-6px);
   border-color: #910002;
   box-shadow: 0 10px 20px rgba(145,0,2,0.15);
 }
 
-/* Título del cilindraje */
-.cilindraje-cc {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
+.cc-number {
+  font-size: 3.5rem;
+  font-weight: 800;
   color: #910002;
-  margin: 16px 12px 8px;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.1;
 }
 
-/* Imagen */
-.card-image {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: #d9d9d9;
-  margin: 0 12px 16px;
-  border-radius: 6px;
-}
-
-.card-image img {
-  width: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.cilindraje-card:hover .card-image img {
-  transform: scale(1.05);
-}
-
-/* Contenido de la tarjeta */
-.card-content {
-  padding: 0 16px 16px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.cilindraje-description {
-  font-size: 0.9rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  flex-grow: 1;
-}
-
-/* Lista de modelos */
-.modelos-list {
-  margin-top: auto;
-}
-
-.modelos-list h4 {
-  font-size: 0.9rem;
+.cc-text {
+  margin-top: 5px;
+  font-size: 3.5rem;
+  font-weight: bold;
   color: #910002;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.modelos-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.modelos-list li {
-  font-size: 0.8rem;
-  color: #555;
-  text-align: center;
-  padding: 2px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-
-.modelos-list li:last-child {
-  border-bottom: none;
-}
-
-/* Mensaje sin cilindrajes */
-.no-cilindrajes {
-  padding: 40px 0;
-  color: #666;
-  font-size: 1.1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .section-title { font-size: 2.3rem; }
-  .card-image { height: 180px; }
-  .cilindraje-cc { font-size: 1.3rem; }
-}
-
-@media (max-width: 768px) {
-  .section-title { font-size: 2rem; }
-  .cilindraje-cc { font-size: 1.2rem; margin: 12px 10px 6px; }
-  .card-image { height: 160px; }
-  .card-content { padding: 0 12px 12px; }
-}
-
-@media (max-width: 576px) {
-  .section-title { font-size: 1.8rem; }
-  .cilindraje-card { margin-bottom: 18px; }
-  .cilindraje-cc { font-size: 1.1rem; margin: 10px 8px 6px; }
-  .card-image { height: 140px; margin: 0 8px 12px; padding: 8px; }
-  .btn-back { padding: 10px 20px; font-size: 0.9rem; }
 }

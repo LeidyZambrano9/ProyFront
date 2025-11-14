@@ -1,67 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 interface Category {
   id: number;
   name: string;
   image: string;
   description: string;
+  route: string;
 }
 
 @Component({
   selector: 'app-categories',
+  standalone: true,
   templateUrl: './categorias.html',
   styleUrls: ['./categorias.css'],
-  imports: [CommonModule] // ✅ Agregar CommonModule aquí
+  imports: [CommonModule, RouterModule]
 })
-export class CategoriasComponent implements OnInit {
-  
+export class CategoriasComponent {
+
   categories: Category[] = [
-    {
-      id: 1,
-      name: 'NAKED',
-      image: 'assets/Naked.png',
-      description: 'Motos versátiles con estilo urbano y deportivo'
-    },
-    {
-      id: 2,
-      name: 'DEPORTIVAS',
-      image: 'assets/Deportivas.png',
-      description: 'Alto rendimiento y diseño aerodinámico'
-    },
-    {
-      id: 3,
-      name: 'AUTOMATICAS',
-      image: 'assets/Automaticas.png',
-      description: 'Facilidad de manejo y comodidad'
-    },
-    {
-      id: 4,
-      name: 'ENDURO',
-      image: 'assets/Enduro.png',
-      description: 'Para aventuras off-road y terrenos difíciles'
-    },
-    {
-      id: 5,
-      name: 'TURING',
-      image: 'assets/Turing.png',
-      description: 'Comodidad para largos recorridos y viajes'
-    },
-    {
-      id: 6,
-      name: 'ALTO CC',
-      image: 'assets/Alto-cc.png',
-      description: 'Gran cilindrada y potencia superior'
-    }
-  ];
+    { id: 1, name: 'naked', image: 'assets/Naked.png', description: 'Motos versátiles...', route: 'naked' },
+    { id: 2, name: 'deportivas', image: 'assets/Deportivas.png', description: 'Alto rendimiento...', route: 'deportivas' },
+    { id: 3, name: 'automaticas', image: 'assets/Automaticas.png', description: 'Facilidad...', route: 'automaticas' },
+    { id: 4, name: 'enduro', image: 'assets/Enduro.png', description: 'Para off-road...', route: 'enduro' },
+    { id: 5, name: 'turing', image: 'assets/Turing.png', description: 'Comodidad...', route: 'turing' },
+    { id: 6, name: 'alto-cc', image: 'assets/Alto-cc.png', description: 'Gran cilindrada...', route: 'alto-cc' }
+  ]; 
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
 
-  selectCategory(category: Category): void {
-    console.log('Categoría seleccionada:', category);
-    // Aquí puedes implementar la navegación
-  }
+  selectCategory(category: any) {
+  const name = category.name.toLowerCase(); // "Naked" → "naked"
+  this.router.navigate(['/cilindrajes', name]);
+}
+
 }

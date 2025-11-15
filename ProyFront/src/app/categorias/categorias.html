@@ -1,31 +1,47 @@
 <section class="categories-section">
+
+  <!-- Imagen de fondo del encabezado -->
+  <div class="inicio-fondo"></div>
+
   <div class="container">
-    <!-- Encabezado -->
+
+    <!-- Encabezado de la sección -->
     <div class="categories-header text-center mb-5">
       <h1 class="section-title">CATEGORÍAS</h1>
+
+      <!-- Texto descriptivo debajo del título -->
       <p class="section-description">
-        EN ESTA SECCIÓN ENCONTRARÁS LOS DIFERENTES TIPOS DE MOTOS DISPONIBLES EN COLOMBIA. 
-        EXPLORA CADA CATEGORÍA Y DESCUBRE CUAL SE ADAPTA MEJOR A TU ESTILO DE VIDA Y SERÁ 
-        TU COMPAÑERA EN LA PRÓXIMA AVENTURA.
+        EN ESTA SECCIÓN ENCONTRARÁS LOS DIFERENTES TIPOS DE MOTOS DISPONIBLES EN COLOMBIA.
+        EXPLORA CADA CATEGORÍA Y DESCUBRE CUAL SE ADAPTA MEJOR A TU ESTILO DE VIDA.
       </p>
     </div>
 
-    <!-- Grid de Categorías -->
+    <!-- Grid de tarjetas -->
     <div class="row g-4">
-      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let category of categories">
-        <div class="category-card" (click)="selectCategory(category)">
-          <!-- Título arriba y centrado -->
+
+      <!-- Recorre las categorías y crea una tarjeta por cada una -->
+      <div class="col-12 col-md-6" *ngFor="let category of categories">
+
+        <!-- Tarjeta clickeable que redirige a cilindrajes -->
+        <a class="category-card"
+           [routerLink]="['/cilindrajes', category.route]">
+
+          <!-- Nombre de la categoría -->
           <h3 class="category-name">{{ category.name }}</h3>
 
-          <!-- Imagen -->
+          <!-- Contenedor de imagen -->
           <div class="card-image">
-            <img [src]="category.image" [alt]="category.name" class="img-fluid">
+            <img
+              [src]="category.image"
+              [alt]="category.name"
+              class="img-fluid"
+            />
           </div>
 
-          <!-- (Opcional) contenido extra debajo si lo necesitas -->
-          <!-- <div class="card-footer">Descripción o botón</div> -->
-        </div>
+        </a>
+
       </div>
     </div>
+
   </div>
 </section>

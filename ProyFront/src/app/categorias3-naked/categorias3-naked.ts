@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
  
 @Component({
-  selector: 'app-categorias3',
+  selector: 'app-categorias3-naked',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './categorias3.html',
-  styleUrls: ['./categorias3.css']
+  templateUrl: './categorias3-naked.html',
+  styleUrls: ['./categorias3-naked.css']
 })
-export class Categorias3 {
+export class Categorias3Naked {
   motos = [
     { nombre: 'Duke 200 NG', img: 'assets/duke200categorias3.png' },
     { nombre: 'Pulsar NS 200 FI 200 CC', img: 'assets/pulsar200categorias3.png' },
@@ -17,5 +17,6 @@ export class Categorias3 {
     { nombre: 'Keeway K-Light 200N 200 CC', img: 'assets/keeway200categorias3.png' },
     { nombre: 'Honda CB 190 R 190 CC', img: 'assets/cb190categorias3.png' }
   ];
- 
 }
+
+

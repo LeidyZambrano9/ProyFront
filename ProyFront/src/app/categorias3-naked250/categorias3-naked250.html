@@ -1,0 +1,23 @@
+<!-- Banner tipo hero full width -->
+<div class="w-100">
+  <img src="assets/bannercategorias3naked250.png" 
+       alt="Banner Categorías 3" 
+       class="img-fluid d-block">
+</div>
+
+<!-- Contenedor de tarjetas de motos -->
+<div class="container mt-4">
+  <div class="row justify-content-center g-4">
+    <div class="col-12 col-sm-5" *ngFor="let moto of motos">
+      <div class="moto-card">
+        <div class="img-container">
+          <img [src]="moto.img" 
+               class="img-fluid">
+        </div>
+        <div class="card-body">
+          <p class="card-title">{{ moto.nombre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

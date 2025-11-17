@@ -1,134 +1,126 @@
-/* Sección general */
+/* =======================================================
+   SECCIÓN PRINCIPAL DE CATEGORÍAS
+   Esta parte define el fondo general, colores y alto mínimo
+   de la pantalla para que toda la vista se vea completa.
+   ======================================================= */
 .categories-section {
-  background-color: #fff; /* fondo principal */
-  color: #111;
-  padding: 60px 0;
-  min-height: 100vh;
-  font-family: 'Oswald', sans-serif;
+  background-color: #fff;          /* Fondo blanco para toda la sección */
+  color: #111;                     /* Color de texto principal (negro suave) */
+  padding-bottom: 60px;            /* Espacio inferior para respirar */
+  min-height: 100vh;               /* Ocupa al menos toda la altura visible */
+  font-family: 'Oswald', sans-serif; /* Tipografía principal usada */
 }
 
-/* Encabezado */
-.categories-header {
-  margin-bottom: 40px;
-  text-align: center;
+/* =======================================================
+   IMAGEN DE FONDO SUPERIOR
+   Esta es la cabecera que aparece arriba como portada.
+   ======================================================= */
+.inicio-fondo {
+  background-image: url("/assets/header-categorias.jpg"); /* Imagen de fondo */
+  background-position: center center;   /* La imagen se centra correctamente */
+  background-repeat: no-repeat;         /* Evita que se repita */
+  background-size: cover;               /* La imagen cubre todo el contenedor */
+  height: 50vh;                         /* Ocupa la mitad de la pantalla */
+  width: 100%;                          /* Abarca todo el ancho */
+  margin-bottom: 40px;                  /* Espacio debajo antes del contenido */
 }
 
+/* =======================================================
+   ENCABEZADO (TÍTULO Y DESCRIPCIÓN)
+   Contiene el título grande y el texto introductorio.
+   ======================================================= */
+.categories-header { 
+  text-align: center;                  /* Centra todo el contenido */
+  margin-bottom: 40px;                 /* Espacio hacia las tarjetas */
+}
+
+/* Título principal de la sección */
 .section-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  color: #910002;
-  position: relative;
+  font-size: 2.8rem;                  /* Tamaño grande del texto */
+  font-weight: 700;                   /* Negrita fuerte */
+  text-transform: uppercase;          /* Lo convierte a MAYÚSCULAS */
+  letter-spacing: 3px;                /* Separación entre letras */
+  margin-bottom: 15px;                /* Espacio inferior */
+  color: #910002;                     /* Color rojo del diseño */
+  position: relative;                 /* Permite usar ::after */
 }
+
+/* Línea decorativa debajo del título */
 .section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: #910002;
+  content: '';                         /* Elemento visual vacío */
+  position: absolute;                  /* Posición absoluta */
+  bottom: -10px;                       /* Ubicado bajo el texto */
+  left: 50%;                           /* Centrado horizontalmente */
+  transform: translateX(-50%);         /* Ajusta el punto real de centrado */
+  width: 100px;                        /* Largo de la linea roja */
+  height: 3px;                         /* Grosor de la línea */
+  background: #910002;                 /* Color de la línea */
 }
 
+/* Texto de descripción debajo del título */
 .section-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #000;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1rem;                    /* Tamaño normal */
+  line-height: 1.6;                   /* Espaciado entre líneas */
+  max-width: 900px;                   /* Ancho máximo del texto */
+  margin: 0 auto;                     /* Lo centra automáticamente */
+  color: #000;                        /* Color negro */
+  text-transform: uppercase;          /* Mayúsculas */
+  letter-spacing: 1px;                /* Separación ligera entre letras */
 }
 
-/* Tarjeta */
+/* =======================================================
+   TARJETAS DE LAS CATEGORÍAS
+   Cada tarjeta es clickeable y muestra nombre + imagen.
+   ======================================================= */
 .category-card {
-  background: #e6e6e6; /* gris claro */
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  cursor: pointer;
-  height: 100%;
-  border: 2px solid transparent;
-  display: flex;
-  flex-direction: column; /* para que título - imagen - footer estén verticales */
-  align-items: stretch;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background: #e6e6e6;                /* Fondo gris claro de la tarjeta */
+  border-radius: 10px;                /* Bordes redondeados */
+  overflow: hidden;                   /* Evita que sobresalga contenido */
+  display: block;                     /* Hace que el <a> sea un bloque completo */
+  border: none;                       /* Sin borde por defecto */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Sombra suave por debajo */
+  transition: 
+    transform 0.25s ease,            /* Animación del movimiento */
+    box-shadow 0.25s ease;           /* Animación de la sombra */
+  text-decoration: none;              /* Quita subrayado del enlace */
+  padding: 15px;                      /* Espacio interno que evita líneas visuales */
 }
 
+/* Efecto al pasar el mouse encima de la tarjeta */
 .category-card:hover {
-  transform: translateY(-6px);
-  border-color: #910002;
-  box-shadow: 0 10px 20px rgba(145,0,2,0.15);
+  transform: translateY(-6px);        /* Se levanta ligeramente hacia arriba */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Sombra más marcada */
 }
 
-/* Título arriba y centrado */
+/* Nombre de la categoría dentro de la tarjeta */
 .category-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #910002;
-  margin: 16px 12px 8px; /* separaciones: top, lados, bottom */
-  text-align: center; /* centrado */
-  letter-spacing: 1px;
-  line-height: 1.1;
+  font-size: 1.4rem;                 /* Tamaño del texto */
+  font-weight: 700;                  /* Negrita */
+  text-transform: uppercase;         /* Mayúsculas */
+  color: #910002;                    /* Color rojo del diseño */
+  margin-bottom: 15px;               /* Espacio debajo del título */
+  text-align: center;                /* Centrado horizontal */
 }
 
-/* Imagen centrada dentro de un recuadro */
+/* Contenedor que guarda la imagen de la tarjeta */
 .card-image {
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-  display: flex;
+  height: 280px;                     /* Altura fija */
+  background: #d9d9d9;               /* Fondo gris para contrastar */
+  border-radius: 6px;                /* Bordes redondeados */
+  display: flex;                     /* Centra la imagen */
   justify-content: center;
   align-items: center;
-  padding: 10px; /* margen interno para que imagen no pegue bordes */
-  background: #d9d9d9; /* ligera diferencia de fondo para la caja de la imagen */
-  margin: 0 12px 16px; /* separaciones laterales y bottom para espacio entre título y borde */
-  border-radius: 6px;
 }
 
+/* Imagen dentro de la tarjeta */
 .card-image img {
-  width: auto;      /* permitir que la imagen mantenga proporción */
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center;
-  transition: transform 0.3s ease;
-  display: block;
+  max-width: 100%;                   /* No se sale del ancho */
+  max-height: 100%;                  /* No se sale de la altura */
+  object-fit: contain;               /* No deforma la imagen */
+  transition: transform 0.3s ease;   /* Animación del zoom */
 }
 
+/* Efecto de zoom suave cuando el mouse está encima */
 .category-card:hover .card-image img {
-  transform: scale(1.03);
-}
-
-/* (Opcional) Pie de tarjeta si lo necesitas */
-/*
-.card-footer {
-  padding: 12px;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #333;
-}
-*/
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .section-title { font-size: 2.3rem; }
-  .card-image { height: 200px; }
-}
-
-@media (max-width: 768px) {
-  .section-title { font-size: 2rem; }
-  .category-name { font-size: 1.1rem; margin: 12px 10px 6px; }
-  .card-image { height: 180px; }
-}
-
-@media (max-width: 576px) {
-  .section-title { font-size: 1.8rem; }
-  .category-card { margin-bottom: 18px; }
-  .category-name { font-size: 1rem; margin: 10px 8px 6px; }
-  .card-image { height: 160px; margin: 0 8px 12px; padding: 8px; }
+  transform: scale(1.03);            /* Aumenta un 3% */
 }

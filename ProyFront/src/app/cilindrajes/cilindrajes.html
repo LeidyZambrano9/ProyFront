@@ -1,0 +1,24 @@
+<!-- Imagen de encabezado -->
+<div class="inicio-fondo-cilindraje" *ngIf="tipo">
+  <img [src]="tipo.header" [alt]="tipo.titulo" class="header-img-cilindraje">
+</div>
+
+<div class="container py-4" *ngIf="tipo">
+
+  <!-- Encabezado -->
+  <div class="cilindraje-header text-center mb-5">
+    <h1 class="section-title">{{ tipo.titulo }}</h1>
+    <p class="section-description">{{ tipo.descripcion }}</p>
+  </div>
+
+  <!-- Grid de cilindrajes -->
+  <div class="row g-4">
+    <div class="col-12 col-md-6"  *ngFor="let cc of tipo.cilindradas">
+      <div class="cuadro-cc-card">
+        <div class="cc-number">{{ cc }}</div>
+        <div class="cc-text">CC</div>
+      </div>
+    </div>
+  </div>
+
+</div>

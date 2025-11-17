@@ -1,124 +1,162 @@
+ /* ==== RESETEO DEL ESPACIO ENTRE NAVBAR E INICIO ==== */
 
 
-.bienvenida p {
-  max-width: 600px;
-  margin: 0 auto;
-}
+ /* inicio.component.css */
+ :host {
+   display: block;
+ }
 
+ .inicio {
+   margin: 0;
+   padding: 0;
+ }
 
-section {
-  scroll-margin-top: 80px; /* por si tienes navbar fija */
-}
+ .inicio section {
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+   min-height: 70vh;
+   display: flex;
+   align-items: center;
+ }
 
-.valor-card {
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
+ .inicio .container {
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+ }
 
-.valor-card:hover {
-  transform: scale(1.05);
-}
+ /* Reset específico para Angular */
+ :host ::ng-deep .inicio h2,
+ :host ::ng-deep .inicio p {
+   margin-top: 0 !important;
+ }
 
-.tip {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-left: 4px solid #ff6600;
-}
+ /* Si usas navbar fijo */
+ body {
+   padding-top: 0 !important;
+ }
 
-.z-1 {
-  z-index: 1 !important;
-}
+ /* Elimina cualquier espacio del contenedor principal */
+ :host {
+   margin: 0;
+   padding: 0;
+ }
 
-/* ==== RESETEO DEL ESPACIO ENTRE NAVBAR E INICIO ==== */
+ body {
+   margin: 0 !important;
+   padding: 0 !important;
+ }
 
-/* Quita margen del primer section debajo del navbar */
-.inicio section {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+ /* Quita márgenes y paddings de la sección de inicio */
+ .inicio section {
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+   height: 70vh;
+ }
 
-/* Asegura que no haya espacio en el contenedor */
-.inicio .container {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+ /* Asegura que no haya espacio en el contenedor */
+ .inicio .container {
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+ }
 
-/* Quita márgenes por defecto en el primer texto */
-.inicio h2:first-child,
-.inicio p:first-child {
-  margin-top: 0 !important;
-}
+ /* Quita márgenes por defecto en el primer texto */
+ .inicio h2:first-child,
+ .inicio p:first-child {
+   margin-top: 0 !important;
+ }
 
-/* Ajusta el body general */
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-}
+ /* Si el navbar es fijo, ajusta la sección */
+ section {
+   scroll-margin-top: 80px;
+ }
 
-/* Si el navbar es fijo, evita solapamiento */
-section {
-  scroll-margin-top: 80px;
-}
+ /* Estilos adicionales para el contenido */
+ .bienvenida p {
+   max-width: 600px;
+   margin: 0 auto;
+ }
 
-.mision h3, .vision h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
+ .valor-card {
+   font-weight: bold;
+   transition: transform 0.3s ease;
+ }
 
-.mision p, .vision p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+ .valor-card:hover {
+   transform: scale(1.05);
+ }
 
-.mision img, .vision img {
-  max-width: 350px;
-  border-radius: 10px;
-}
+ .tip {
+   background-color: rgba(0, 0, 0, 0.7);
+   border-left: 4px solid #ff6600;
+ }
 
-.tips-moteros {
-  position: relative;
-}
+ .z-1 {
+   z-index: 1 !important;
+ }
 
-.tips-moteros .overlay {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
+ .mision h3,
+ .vision h3 {
+   font-size: 1.8rem;
+   margin-bottom: 1rem;
+ }
 
-.tips-moteros .container {
-  position: relative;
-  z-index: 2;
-}
+ .mision p,
+ .vision p {
+   font-size: 1.1rem;
+   line-height: 1.6;
+ }
 
-.accordion-button {
-  background-color: #fff !important;
-  color: #333 !important;
-  border-left: 5px solid #ffa500 !important;
-  border-radius: 10px !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+ .mision img,
+ .vision img {
+   max-width: 350px;
+   border-radius: 10px;
+ }
 
-.accordion-button:hover {
-  transform: translateX(10px);
-  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
-}
+ .tips-moteros {
+   position: relative;
+ }
 
-.accordion-button:focus {
-  box-shadow: none !important;
-}
+ .tips-moteros .overlay {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   z-index: 1;
+ }
 
-.accordion-item {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-}
+ .tips-moteros .container {
+   position: relative;
+   z-index: 2;
+ }
 
-.accordion-body {
-  background-color: #f9f9f9;
-  font-family: 'Courier New', monospace;
-  border-left: 4px solid #ffa500;
-}
+ .accordion-button {
+   background-color: #fff !important;
+   color: #333 !important;
+   border-left: 5px solid #ffa500 !important;
+   border-radius: 10px !important;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .accordion-button:hover {
+   transform: translateX(10px);
+   box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+ }
+
+ .accordion-button:focus {
+   box-shadow: none !important;
+ }
+
+ .accordion-item {
+   border: none;
+   border-radius: 10px;
+   overflow: hidden;
+ }
+
+ .accordion-body {
+   background-color: #f9f9f9;
+   font-family: 'Courier New', monospace;
+   border-left: 4px solid #ffa500;
+ }

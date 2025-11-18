@@ -15,11 +15,14 @@ import { Categorias4Keeway200 } from './categorias4-keeway200/categorias4-keeway
 import { Categorias4Hondacb190 } from './categorias4-hondacb190/categorias4-hondacb190';
 import { Categorias3Naked125 } from './categorias3-naked125/categorias3-naked125';
 import { Categorias3Naked250 } from './categorias3-naked250/categorias3-naked250';
+import { Categorias3Naked400 } from './categorias3-naked400/categorias3-naked400';
+import { Categorias3Naked750 } from './categorias3-naked750/categorias3-naked750';
+import { Categorias3Naked1000 } from './categorias3-naked1000/categorias3-naked1000';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBar, Footer, Categorias3Naked250],
+  imports: [RouterOutlet, NavBar, Footer, Categorias3Naked1000],
 
   templateUrl: './app.html',
   styleUrl: './app.css'

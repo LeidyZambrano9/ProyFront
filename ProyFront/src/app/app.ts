@@ -18,11 +18,17 @@ import { Categorias3Naked250 } from './categorias3-naked250/categorias3-naked250
 import { Categorias3Naked400 } from './categorias3-naked400/categorias3-naked400';
 import { Categorias3Naked750 } from './categorias3-naked750/categorias3-naked750';
 import { Categorias3Naked1000 } from './categorias3-naked1000/categorias3-naked1000';
+import { Categorias4NakedRaider125 } from './categorias4-naked-raider125/categorias4-naked-raider125';
+import { Categorias4NakedHerohunk125 } from './categorias4-naked-herohunk125/categorias4-naked-herohunk125';
+import { Categorias4NakedPulsarns125 } from './categorias4-naked-pulsarns125/categorias4-naked-pulsarns125';
+import { Categorias4NakedAktcr4125 } from './categorias4-naked-aktcr4125/categorias4-naked-aktcr4125';
+import { Categorias4NakedAktnkd125 } from './categorias4-naked-aktnkd125/categorias4-naked-aktnkd125';
+import { Categorias4NakedPulsarn125 } from './categorias4-naked-pulsarn125/categorias4-naked-pulsarn125';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBar, Footer, Categorias3Naked1000],
+  imports: [RouterOutlet, NavBar, Footer, Categorias4NakedPulsarn125],
 
   templateUrl: './app.html',
   styleUrl: './app.css'

@@ -1,0 +1,60 @@
+ <!-- inicio.component.html -->
+<div class="inicio">
+    <section class="position-relative text-light d-flex align-items-center"
+        style="background: url('assets/comparadorr.png') center center / cover no-repeat; min-height: 70vh; margin-top: 0 !important;">
+        <div class="container position-relative z-1" style="margin-top: 0 !important; padding-top: 0 !important;">
+        </div>
+    </section>
+     <div class="categories-header text-center mb-5">
+      <h1 class="section-title">COMPARADOR DE MOTO</h1>
+
+      <!-- Texto descriptivo debajo del título -->
+      <p class="section-description">
+        Descubre la herramienta perfecta para encontrar tu próxima moto. Aquí podrás explorar diferentes categorías, comparar modelos y analizar cuál se adapta mejor a tu estilo de vida y necesidades.
+      </p>
+      <p> ¡Empieza ahora y elige la moto que mejor va contigo!</p>
+    </div>
+</div>
+
+  <div class="row">
+
+    <!-- PRIMERA COLUMNA -->
+    <div class="col-12 col-md-6 mb-4">
+      <h5 class="text-center">Moto 1</h5>
+
+      <!-- SELECTOR -->
+      <select class="form-select mb-3" (change)="seleccionarMoto1($event)">
+        <option value="">Seleccione una moto</option>
+        <option *ngFor="let moto of motos" [value]="moto.id">
+          {{ moto.nombre }}
+        </option>
+      </select>
+
+      <!-- TARJETA y ESPECIFICACIONES -->
+      <div *ngIf="motoSeleccionada1">
+        <app-moto-card [moto]="motoSeleccionada1"></app-moto-card>
+        <app-especificaciones [moto]="motoSeleccionada1"></app-especificaciones>
+      </div>
+    </div>
+
+    <!-- SEGUNDA COLUMNA -->
+    <div class="col-12 col-md-6 mb-4">
+      <h5 class="text-center">Moto 2</h5>
+
+      <!-- SELECTOR -->
+      <select class="form-select mb-3" (change)="seleccionarMoto2($event)">
+        <option value="">Seleccione una moto</option>
+        <option *ngFor="let moto of motos" [value]="moto.id">
+          {{ moto.nombre }}
+        </option>
+      </select>
+
+      <!-- TARJETA y ESPECIFICACIONES -->
+      <div *ngIf="motoSeleccionada2">
+        <app-moto-card [moto]="motoSeleccionada2"></app-moto-card>
+        <app-especificaciones [moto]="motoSeleccionada2"></app-especificaciones>
+      </div>
+    </div>
+
+  </div>
+

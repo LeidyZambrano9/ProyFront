@@ -27,13 +27,14 @@ import { Categorias4NakedPulsarn125 } from './categorias4-naked-pulsarn125/categ
 import { Categorias4NakedDuke250 } from './categorias4-naked-duke250/categorias4-naked-duke250';
 import { Categorias4NakedPulsarn250 } from './categorias4-naked-pulsarn250/categorias4-naked-pulsarn250';
 import { Categorias4NakedGixxer250 } from './categorias4-naked-gixxer250/categorias4-naked-gixxer250';
-import { Contacto } from './contacto/contacto';
+import { Comparador } from './comparador/comparador';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
 
-  imports: [RouterOutlet, NavBar, Footer, Contacto ],
+  imports: [RouterOutlet, NavBar, Footer],
 
   templateUrl: './app.html',
   styleUrl: './app.css'

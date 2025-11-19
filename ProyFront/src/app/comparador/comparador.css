@@ -1,0 +1,89 @@
+
+.comparador {
+  background-color: #fff;          /* Fondo blanco para toda la sección */
+  color: #111;                     /* Color de texto principal (negro suave) */
+  padding-bottom: 60px;            /* Espacio inferior para respirar */
+  min-height: 100vh;               /* Ocupa al menos toda la altura visible */
+  font-family: 'Oswald', sans-serif; /* Tipografía principal usada */
+}
+
+/* =======================================================
+   IMAGEN DE FONDO SUPERIOR
+   Esta es la cabecera que aparece arriba como portada.
+   ======================================================= */
+.inicio-fondo {
+  background-image: url("/assets/comparadorr.png"); /* Imagen de fondo */
+  background-position: center center;   /* La imagen se centra correctamente */
+  background-repeat: no-repeat;         /* Evita que se repita */
+  background-size: cover;               /* La imagen cubre todo el contenedor */
+  height: 50vh;                         /* Ocupa la mitad de la pantalla */
+  width: 100%;                          /* Abarca todo el ancho */
+  margin-bottom: 40px;                  /* Espacio debajo antes del contenido */
+}
+
+/* =======================================================
+   ENCABEZADO (TÍTULO Y DESCRIPCIÓN)
+   Contiene el título grande y el texto introductorio.
+   ======================================================= */
+.categories-header { 
+  text-align: center;                  /* Centra todo el contenido */
+  margin-bottom: 40px;                 /* Espacio hacia las tarjetas */
+}
+
+/* Título principal de la sección */
+.section-title {
+  font-size: 2.8rem;                  /* Tamaño grande del texto */
+  font-weight: 700;                   /* Negrita fuerte */
+  text-transform: uppercase;          /* Lo convierte a MAYÚSCULAS */
+  letter-spacing: 3px;                /* Separación entre letras */
+  margin-bottom: 15px;                /* Espacio inferior */
+  color: #910002;                     /* Color rojo del diseño */
+  position: relative;                 /* Permite usar ::after */
+}
+
+/* Línea decorativa debajo del título */
+.section-title::after {
+  content: '';                         /* Elemento visual vacío */
+  position: absolute;                  /* Posición absoluta */
+  bottom: -10px;                       /* Ubicado bajo el texto */
+  left: 50%;                           /* Centrado horizontalmente */
+  transform: translateX(-50%);         /* Ajusta el punto real de centrado */
+  width: 100px;                        /* Largo de la linea roja */
+  height: 3px;                         /* Grosor de la línea */
+  background: #910002;                 /* Color de la línea */
+}
+
+/* Texto de descripción debajo del título */
+.section-description {
+  font-size: 1rem;                    /* Tamaño normal */
+  line-height: 1.6;                   /* Espaciado entre líneas */
+  max-width: 900px;                   /* Ancho máximo del texto */
+  margin: 0 auto;                     /* Lo centra automáticamente */
+  color: #000;                        /* Color negro */
+  text-transform: uppercase;          /* Mayúsculas */
+  letter-spacing: 1px;                /* Separación ligera entre letras */
+}
+
+
+
+
+
+
+h5 {
+  font-weight: bold;
+}
+
+select {
+  font-size: 1rem;
+  padding: 8px;
+}
+
+
+
+.col-md-6 {
+  border-right: 1px solid #ddd;
+}
+
+.col-md-6:last-child {
+  border-right: none;
+}

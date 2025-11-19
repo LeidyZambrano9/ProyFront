@@ -27,6 +27,9 @@ import { Categorias4NakedPulsarn125 } from './categorias4-naked-pulsarn125/categ
 import { Categorias4NakedDuke250 } from './categorias4-naked-duke250/categorias4-naked-duke250';
 import { Categorias4NakedPulsarn250 } from './categorias4-naked-pulsarn250/categorias4-naked-pulsarn250';
 import { Categorias4NakedGixxer250 } from './categorias4-naked-gixxer250/categorias4-naked-gixxer250';
+
+import { Comparador } from './comparador/comparador';
+
 import { Categorias4NakedCfmotonk250 } from './categorias4-naked-cfmotonk250/categorias4-naked-cfmotonk250';
 import { Categorias4NakedYamahafz250 } from './categorias4-naked-yamahafz250/categorias4-naked-yamahafz250';
 import { Categorias4NakedAkt250 } from './categorias4-naked-akt250/categorias4-naked-akt250';

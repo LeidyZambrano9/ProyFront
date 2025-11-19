@@ -1,0 +1,67 @@
+/* === CONTENEDOR PRINCIPAL === */
+.especificaciones-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 25px;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* Efecto suave */
+.especificaciones-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* === TITULO === */
+.especificaciones-titulo {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #910002;
+    margin-bottom: 20px;
+}
+
+/* === TABLA === */
+.especificaciones-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.especificaciones-tabla th,
+.especificaciones-tabla td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.especificaciones-tabla th {
+    text-align: left;
+    width: 45%;
+    font-weight: bold;
+    color: #910002;
+}
+
+.especificaciones-tabla tr:last-child td,
+.especificaciones-tabla tr:last-child th {
+    border-bottom: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .especificaciones-card {
+        padding: 15px 18px;
+    }
+
+    .especificaciones-titulo {
+        font-size: 1.3rem;
+    }
+
+    .especificaciones-tabla th,
+    .especificaciones-tabla td {
+        font-size: 0.9rem;
+        padding: 8px 6px;
+    }
+}

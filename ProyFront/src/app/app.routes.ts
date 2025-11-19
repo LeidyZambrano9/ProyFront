@@ -3,6 +3,10 @@ import { Inicio } from './inicio/inicio';
 import { CategoriasComponent } from './categorias/categorias';
 import { Contacto } from './contacto/contacto';
 import { CilindrajesComponent } from './cilindrajes/cilindrajes';
+
+import { Comparador } from './comparador/comparador';
+
+
 import { Categorias3Naked125 } from './categorias3-naked125/categorias3-naked125';
 import { Categorias3Naked } from './categorias3-naked/categorias3-naked';
 import { Categorias3Naked250 } from './categorias3-naked250/categorias3-naked250';
@@ -45,6 +49,7 @@ import { Categorias4NakedSuzukigsx1000 } from './categorias4-naked-suzukigsx1000
 import { Categorias4NakedHondacb1000 } from './categorias4-naked-hondacb1000/categorias4-naked-hondacb1000';
 import { Categorias4NakedKawasakiz1000 } from './categorias4-naked-kawasakiz1000/categorias4-naked-kawasakiz1000';
 import { Categorias4NakedDucatistreetfigther1000 } from './categorias4-naked-ducatistreetfigther1000/categorias4-naked-ducatistreetfigther1000';
+
 
 
 export const routes: Routes = [
@@ -99,7 +104,13 @@ export const routes: Routes = [
 
     // ----------- CATEGORIAS NAKED 250 ---------------- //
 
+
+  { path: 'cilindrajes/:categoria', component: CilindrajesComponent },
+
+  { path: 'comparador', component: Comparador},
+
   { path: 'categorias4-naked-duke250', component: Categorias4NakedDuke250 },
+
 
   { path: 'categorias4-naked-pulsarn250', component: Categorias4NakedPulsarn250 },
 

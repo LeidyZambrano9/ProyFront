@@ -1,0 +1,89 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4 text-danger fw-bold">Contáctanos</h2>
+
+  <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()" class="mx-auto" style="max-width: 600px;">
+
+    <!-- NOMBRE -->
+    <div class="mb-3">
+      <label class="form-label">Nombre</label>
+      <input
+        type="text"
+        formControlName="nombre"
+        class="form-control"
+        [class.is-invalid]="campoInvalido('nombre')"
+        [class.is-valid]="campoValido('nombre')"
+        (input)="onInput('nombre')"
+      >
+      <div *ngIf="campoInvalido('nombre')" class="invalid-feedback">
+        <div *ngIf="f['nombre'].errors?.['required']">El nombre es obligatorio.</div>
+        <div *ngIf="f['nombre'].errors?.['minlength']">Debe tener al menos 3 caracteres.</div>
+        <div *ngIf="f['nombre'].errors?.['pattern']">Solo se permiten letras y espacios.</div>
+      </div>
+    </div>
+
+    <!-- CORREO -->
+    <div class="mb-3">
+      <label class="form-label">Correo electrónico</label>
+      <input
+        type="email"
+        formControlName="correo"
+        class="form-control"
+        [class.is-invalid]="campoInvalido('correo')"
+        [class.is-valid]="campoValido('correo')"
+        (input)="onInput('correo')"
+      >
+      <div *ngIf="campoInvalido('correo')" class="invalid-feedback">
+        <div *ngIf="f['correo'].errors?.['required']">El correo es obligatorio.</div>
+        <div *ngIf="f['correo'].errors?.['email']">El correo no tiene un formato válido.</div>
+      </div>
+    </div>
+
+    <!-- TELÉFONO -->
+    <div class="mb-3">
+      <label class="form-label">Teléfono</label>
+      <input
+        type="text"
+        formControlName="telefono"
+        class="form-control"
+        [class.is-invalid]="campoInvalido('telefono')"
+        [class.is-valid]="campoValido('telefono')"
+        (input)="onInput('telefono')"
+      >
+      <div *ngIf="campoInvalido('telefono')" class="invalid-feedback">
+        <div *ngIf="f['telefono'].errors?.['required']">El teléfono es obligatorio.</div>
+        <div *ngIf="f['telefono'].errors?.['pattern']">Debe tener entre 7 y 10 dígitos.</div>
+      </div>
+    </div>
+
+    <!-- MENSAJE -->
+    <div class="mb-3">
+      <label class="form-label">Mensaje</label>
+      <textarea
+        rows="4"
+        formControlName="mensaje"
+        class="form-control"
+        [class.is-invalid]="campoInvalido('mensaje')"
+        [class.is-valid]="campoValido('mensaje')"
+        (input)="onInput('mensaje')"
+      ></textarea>
+      <div *ngIf="campoInvalido('mensaje')" class="invalid-feedback">
+        <div *ngIf="f['mensaje'].errors?.['required']">El mensaje es obligatorio.</div>
+        <div *ngIf="f['mensaje'].errors?.['minlength']">Debe tener al menos 10 caracteres.</div>
+      </div>
+    </div>
+
+    <!-- BOTÓN -->
+    <div class="text-center">
+      <button
+        type="submit"
+        class="btn px-4"
+        [class.btn-danger]="contactoForm.valid"
+        [class.btn-secondary]="!contactoForm.valid"
+        [disabled]="!contactoForm.valid"
+      >
+        Enviar
+      </button>
+    </div>
+
+  </form>
+</div>

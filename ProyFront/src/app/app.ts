@@ -27,13 +27,34 @@ import { Categorias4NakedPulsarn125 } from './categorias4-naked-pulsarn125/categ
 import { Categorias4NakedDuke250 } from './categorias4-naked-duke250/categorias4-naked-duke250';
 import { Categorias4NakedPulsarn250 } from './categorias4-naked-pulsarn250/categorias4-naked-pulsarn250';
 import { Categorias4NakedGixxer250 } from './categorias4-naked-gixxer250/categorias4-naked-gixxer250';
-import { Contacto } from './contacto/contacto';
+import { Categorias4NakedCfmotonk250 } from './categorias4-naked-cfmotonk250/categorias4-naked-cfmotonk250';
+import { Categorias4NakedYamahafz250 } from './categorias4-naked-yamahafz250/categorias4-naked-yamahafz250';
+import { Categorias4NakedAkt250 } from './categorias4-naked-akt250/categorias4-naked-akt250';
+import { Categorias4NakedKtmduke400 } from './categorias4-naked-ktmduke400/categorias4-naked-ktmduke400';
+import { Categorias4NakedKawsakiz400 } from './categorias4-naked-kawsakiz400/categorias4-naked-kawsakiz400';
+import { Categorias4NakedPulsarns400 } from './categorias4-naked-pulsarns400/categorias4-naked-pulsarns400';
+import { Categorias4NakedApachertr400 } from './categorias4-naked-apachertr400/categorias4-naked-apachertr400';
+import { Categorias4NakedCfmotonk400 } from './categorias4-naked-cfmotonk400/categorias4-naked-cfmotonk400';
+import { Categorias4NakedHusqvarna400 } from './categorias4-naked-husqvarna400/categorias4-naked-husqvarna400';
+import { Categorias4NakedApriliasilver750 } from './categorias4-naked-apriliasilver750/categorias4-naked-apriliasilver750';
+import { Categorias4NakedSuzukigsr750 } from './categorias4-naked-suzukigsr750/categorias4-naked-suzukigsr750';
+import { Categorias4NakedMvagusta750 } from './categorias4-naked-mvagusta750/categorias4-naked-mvagusta750';
+import { Categorias4NakedHondacb750 } from './categorias4-naked-hondacb750/categorias4-naked-hondacb750';
+import { Categorias4NakedCfmotonk750 } from './categorias4-naked-cfmotonk750/categorias4-naked-cfmotonk750';
+import { Categorias4NakedBenelli750 } from './categorias4-naked-benelli750/categorias4-naked-benelli750';
+import { Categorias4NakedBmws1000 } from './categorias4-naked-bmws1000/categorias4-naked-bmws1000'; 
+import { Categorias4NakedKtmsuperduke1000 } from './categorias4-naked-ktmsuperduke1000/categorias4-naked-ktmsuperduke1000';
+import { Categorias4NakedSuzukigsx1000 } from './categorias4-naked-suzukigsx1000/categorias4-naked-suzukigsx1000';
+import { Categorias4NakedHondacb1000 } from './categorias4-naked-hondacb1000/categorias4-naked-hondacb1000';
+import { Categorias4NakedKawasakiz1000 } from './categorias4-naked-kawasakiz1000/categorias4-naked-kawasakiz1000';
+import { Categorias4NakedDucatistreetfigther1000 } from './categorias4-naked-ducatistreetfigther1000/categorias4-naked-ducatistreetfigther1000';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
 
-  imports: [RouterOutlet, NavBar, Footer, Contacto ],
+  imports: [RouterOutlet, NavBar, Footer],
 
   templateUrl: './app.html',
   styleUrl: './app.css'

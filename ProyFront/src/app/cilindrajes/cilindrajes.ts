@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 type TipoMotoKey =
@@ -33,7 +33,7 @@ export class CilindrajesComponent implements OnInit {
       descripcion: 'Las motos Naked combinan potencia y diseño minimalista.',
       imagen: 'assets/Naked.png',
       header: 'assets/NakedHeader.jpg' ,
-      cilindradas: [125, 150, 200, 250, 300, 400]
+      cilindradas: [125, 200, 250, 400, 750, 1000]
     },
     deportivas: {
       titulo: 'DEPORTIVAS',
@@ -70,19 +70,39 @@ export class CilindrajesComponent implements OnInit {
       header: 'assets/header-alto-cc.jpg',
       cilindradas: [125, 150, 200, 250, 300, 400]
     }
-
   };
 
   tipo?: TipoInfo;
 
-  constructor(private route: ActivatedRoute) { }
+  // 🔹 Mapa de rutas para cilindradas específicas
+  private rutasCilindrajesnaked: Record<string, Record<number, string>> = {
+    naked: {
+      125: '/naked125',
+      200: '/naked',
+      250: '/naked250',
+      400: '/naked400',
+      750: '/naked750',
+      1000: '/naked1000'
+    }
+  };
+
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const categoria = this.route.snapshot.paramMap.get('categoria') as TipoMotoKey | null;
+    this.tipo = categoria && this.tipos[categoria] ? this.tipos[categoria] : this.tipos['naked'];
+  }
 
-    // Validar categoría y fallback a "naked"
-    this.tipo = categoria && this.tipos[categoria]
-      ? this.tipos[categoria]
-      : this.tipos['naked'];
+  // 🔹 Método de navegación según cilindrada
+  irACilindraje(cc: number) {
+    const categoria = this.route.snapshot.paramMap.get('categoria');
+    if (categoria && this.rutasCilindrajesnaked[categoria]?.[cc]) {
+      const ruta = this.rutasCilindrajesnaked[categoria][cc];
+      this.router.navigate([ruta]);
+    } else {
+      console.log(`Cilindrada ${cc} de ${categoria} no tiene ruta configurada.`);
+    }
   }
 }
+
+

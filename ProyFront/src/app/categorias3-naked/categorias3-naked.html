@@ -12,15 +12,19 @@
       <div class="moto-card">
         <div class="img-container">
           <img [src]="moto.img" 
-               [alt]="moto.nombre" 
-               [class.apache-img]="moto.nombre.includes('Apache')" 
+               [alt]="moto.nombre"  
                class="img-fluid">
         </div>
-        <div class="card-body">
+
+        <!-- Recuadro gris clickeable -->
+        <div class="card-body" 
+             style="cursor: pointer;"
+             (click)="irACategoria(moto)">
           <p class="card-title">{{ moto.nombre }}</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 

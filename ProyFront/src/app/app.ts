@@ -54,7 +54,7 @@ import { Categorias4NakedDucatistreetfigther1000 } from './categorias4-naked-duc
   selector: 'app-root',
   standalone: true,
 
-  imports: [RouterOutlet, NavBar, Footer, Categorias4NakedBmws1000],
+  imports: [RouterOutlet, NavBar, Footer],
 
   templateUrl: './app.html',
   styleUrl: './app.css'

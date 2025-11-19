@@ -24,11 +24,14 @@ import { Categorias4NakedPulsarns125 } from './categorias4-naked-pulsarns125/cat
 import { Categorias4NakedAktcr4125 } from './categorias4-naked-aktcr4125/categorias4-naked-aktcr4125';
 import { Categorias4NakedAktnkd125 } from './categorias4-naked-aktnkd125/categorias4-naked-aktnkd125';
 import { Categorias4NakedPulsarn125 } from './categorias4-naked-pulsarn125/categorias4-naked-pulsarn125';
+import { Categorias4NakedDuke250 } from './categorias4-naked-duke250/categorias4-naked-duke250';
+import { Categorias4NakedPulsarn250 } from './categorias4-naked-pulsarn250/categorias4-naked-pulsarn250';
+import { Categorias4NakedGixxer250 } from './categorias4-naked-gixxer250/categorias4-naked-gixxer250';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBar, Footer, Categorias4NakedPulsarn125],
+  imports: [RouterOutlet, NavBar, Footer, Categorias3Deportivas],
 
   templateUrl: './app.html',
   styleUrl: './app.css'

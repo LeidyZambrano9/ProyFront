@@ -5,19 +5,23 @@
          class="img-fluid d-block">
   </div>
   
-  <!-- Contenedor de tarjetas de motos -->
-  <div class="container mt-4">
-    <div class="row justify-content-center g-4">
-      <div class="col-12 col-sm-5" *ngFor="let moto of motos">
-        <div class="moto-card">
-          <div class="img-container">
-            <img [src]="moto.img" 
-                 class="img-fluid">
-          </div>
-          <div class="card-body">
-            <p class="card-title">{{ moto.nombre }}</p>
-          </div>
+<!-- Contenedor de tarjetas de motos -->
+<div class="container mt-4">
+  <div class="row justify-content-center g-4">
+    <div class="col-12 col-sm-5" *ngFor="let moto of motos">
+      <div class="moto-card">
+        <div class="img-container">
+          <img [src]="moto.img" 
+               [alt]="moto.nombre"  
+               class="img-fluid">
+        </div>
+        <!-- Recuadro gris clickeable -->
+        <div class="card-body" 
+             style="cursor: pointer;"
+             (click)="irACategoria(moto)">
+          <p class="card-title">{{ moto.nombre }}</p>
         </div>
       </div>
     </div>
   </div>
+</div>

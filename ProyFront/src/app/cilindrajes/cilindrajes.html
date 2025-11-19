@@ -13,8 +13,8 @@
 
   <!-- Grid de cilindrajes -->
   <div class="row g-4">
-    <div class="col-12 col-md-6"  *ngFor="let cc of tipo.cilindradas">
-      <div class="cuadro-cc-card">
+    <div class="col-12 col-md-6" *ngFor="let cc of tipo.cilindradas">
+      <div class="cuadro-cc-card" (click)="irACilindraje(cc)">
         <div class="cc-number">{{ cc }}</div>
         <div class="cc-text">CC</div>
       </div>
@@ -22,3 +22,6 @@
   </div>
 
 </div>
+
+
+
